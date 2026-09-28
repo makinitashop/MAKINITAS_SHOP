@@ -1866,7 +1866,8 @@
         <a href="#chandals" onclick="closeMobileMenu()">CHÁNDALS</a>
         <a href="#camisetas" onclick="closeMobileMenu()">RETRO</a>
         <a href="#camisetas" onclick="closeMobileMenu()">COLLABS</a>
-        <a href="#calle" onclick="closeMobileMenu()">CONJUNTOS DE INVIERNO</a>
+        <a href="#invierno" onclick="closeMobileMenu()">CONJUNTOS INVIERNO</a>
+        <a href="#calle" onclick="closeMobileMenu()">CHÁNDALS DEPORTIVOS</a>
         <a href="#zapatillas" onclick="closeMobileMenu()">ZAPATILLAS</a>
         <a href="#gorras" onclick="closeMobileMenu()">GORRAS</a>
         <a href="#airpods" onclick="closeMobileMenu()">AIRPODS</a>
@@ -1991,6 +1992,59 @@
         </div>
     </div>
 
+    <!-- ANUNCIO DESTACADO — LO PRIMERO DE TODO -->
+    <style>
+        .top-promo-bar {
+            background: linear-gradient(90deg, #F5B800, #FFD84D, #F5B800);
+            background-size: 200% 100%;
+            animation: giveawaySlide 4s linear infinite;
+            padding: 12px 16px 10px;
+            text-align: center;
+        }
+        .top-promo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #111;
+            text-transform: uppercase;
+            display: block;
+        }
+        .top-promo-text strong { color: #B00012; }
+        .top-views-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            margin-top: 8px;
+            background: #111;
+            border: 1px solid rgba(0,0,0,0.6);
+            color: #fff;
+            font-family: 'DM Mono', monospace;
+            font-size: 11.5px;
+            letter-spacing: 0.5px;
+            padding: 5px 14px;
+            border-radius: 20px;
+        }
+        .top-views-badge .dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: #4ECDC4; display: inline-block;
+            animation: blink 1.4s infinite;
+        }
+        .top-promo-imgs {
+            display: flex; justify-content: center; gap: 10px;
+            margin: 12px auto 4px; max-width: 520px;
+        }
+        .top-promo-imgs img {
+            width: 50%; max-width: 250px; height: 170px; object-fit: cover;
+            border-radius: 12px; border: 2px solid #111;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            cursor: pointer; transition: transform 0.25s ease;
+        }
+        .top-promo-imgs img:hover { transform: scale(1.03); }
+        @media (max-width: 600px) {
+            .top-promo-imgs img { height: 130px; }
+            .top-promo-text { font-size: 12px; letter-spacing: 0.5px; }
+            .top-views-badge { font-size: 10px; padding: 4px 12px; }
+        }
+    </style>
     <!-- CABECERA PROFESIONAL -->
     <header class="arcade-marquee">
         <div class="header-inner">
@@ -2018,7 +2072,8 @@
             <li><a href="#chandals" class="nav-neon-pink">CHÁNDALS</a></li>
             <li><a href="#camisetas" class="nav-neon-yellow">RETRO</a></li>
             <li><a href="#camisetas" class="nav-neon-turq">COLLABS</a></li>
-            <li><a href="#calle" class="nav-neon-blue">CONJUNTOS INVIERNO</a></li>
+            <li><a href="#invierno" class="nav-neon-pink">CONJUNTOS INVIERNO</a></li>
+            <li><a href="#calle" class="nav-neon-blue">CHÁNDALS DEPORTIVOS</a></li>
             <li><a href="#airpods" class="nav-neon-blue">AIRPODS</a></li>
             <li><a href="#zapatillas" class="nav-neon-turq">ZAPATILLAS</a></li>
             <li><a href="#gorras" class="nav-neon-blue">GORRAS</a></li>
@@ -2103,6 +2158,56 @@
         <span class="giveaway-banner-text">🎁 SORTEO SUPER TOCHO MUY PRONTO — ¡ESTATE ATENTO EN INSTAGRAM! 🎁</span>
     </div>
 
+    <!-- ANUNCIO DESTACADO — DEBAJO DEL SORTEO -->
+    <div class="top-promo-bar">
+        <span class="top-promo-text">🔥 CAMISETAS ESPAÑA EN STOCK — DESDE <strong>15€</strong> LA CAMISETA 🔥</span>
+        <div class="top-promo-imgs">
+            <img loading="lazy" src="https://s1.ppllstatics.com/rc/www/multimedia/2026/08/04/ya-esta-a-la-venta-consigue-la-nueva-camiseta-de-la-seleccion-espanola-con-las-dos-estrellas-antes-de-que-se-agote-1200x840.jpg" onclick="openZoom(this.src)" alt="Camiseta España">
+            <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ4aVCk9BaPPWBqglmIryypSwEL_uYgI9pC0ZJIKrrYjCQ_yls75eszk4p&s=10" onclick="openZoom(this.src)" alt="Camiseta España">
+        </div>
+        <style>
+            .promo-picker { background:#111; color:#fff; border-radius:16px; padding:16px 14px 14px; max-width:520px; margin:14px auto 4px; text-align:center; box-shadow:0 8px 24px rgba(0,0,0,0.35); }
+            .promo-step { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:1.5px; color:#F5B800; margin:2px 0 10px; }
+            .promo-opts { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:14px; }
+            .promo-opt { background:#1c1c1c; border:2px solid #333; border-radius:12px; color:#fff; padding:10px 8px; cursor:pointer; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.5px; display:flex; flex-direction:column; align-items:center; gap:4px; transition:0.2s; line-height:1.3; }
+            .promo-opt strong { font-size:16px; color:#F5B800; }
+            .promo-opt:hover { border-color:#F5B800; }
+            .promo-opt.selected { border-color:#F5B800; background:rgba(245,184,0,0.14); box-shadow:0 0 14px rgba(245,184,0,0.35); }
+            .promo-dot { width:22px; height:22px; border-radius:50%; border:2px solid #fff; display:inline-block; }
+            .promo-dot.red { background:#C1121F; }
+            .promo-dot.white { background:#fff; }
+            .promo-tabs { display:flex; justify-content:center; gap:6px; margin-bottom:8px; }
+            .promo-tab { background:none; border:1px solid #444; color:#aaa; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:800; letter-spacing:1px; padding:5px 14px; border-radius:20px; cursor:pointer; }
+            .promo-tab.active { background:rgba(245,184,0,0.15); border-color:#F5B800; color:#F5B800; }
+            .promo-sizes { display:flex; justify-content:center; flex-wrap:wrap; gap:6px; margin-bottom:14px; }
+            .promo-size { background:#1c1c1c; border:1px solid #444; color:#ddd; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; padding:7px 12px; min-width:38px; border-radius:6px; cursor:pointer; transition:0.2s; }
+            .promo-size:hover { border-color:#F5B800; }
+            .promo-size.selected { background:#F5B800; color:#111; border-color:#F5B800; }
+            .promo-wa { display:flex; align-items:center; justify-content:center; gap:8px; background:#25D366; color:#fff; text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:900; font-size:13px; letter-spacing:1px; padding:14px; border-radius:10px; transition:0.2s; }
+            .promo-wa:hover { opacity:0.88; }
+            .promo-warn { min-height:16px; margin-top:8px; font-family:'DM Mono',monospace; font-size:11px; color:#FFB3B3; }
+        </style>
+        <div class="promo-picker">
+            <div class="promo-step">1 · ELIGE TU CAMISETA DE ESPAÑA</div>
+            <div class="promo-opts">
+                <button type="button" class="promo-opt" data-name="ESPAÑA ROJA 1 ESTRELLA" data-price="15" onclick="promoPick(this)"><span class="promo-dot red"></span><span>ROJA<br>1 ESTRELLA</span><strong>15€</strong></button>
+                <button type="button" class="promo-opt" data-name="ESPAÑA BLANCA 1 ESTRELLA" data-price="15" onclick="promoPick(this)"><span class="promo-dot white"></span><span>BLANCA<br>1 ESTRELLA</span><strong>15€</strong></button>
+                <button type="button" class="promo-opt" data-name="ESPAÑA ROJA 2 ESTRELLAS" data-price="18" onclick="promoPick(this)"><span class="promo-dot red"></span><span>ROJA<br>2 ESTRELLAS</span><strong>18€</strong></button>
+                <button type="button" class="promo-opt" data-name="ESPAÑA BLANCA 2 ESTRELLAS" data-price="18" onclick="promoPick(this)"><span class="promo-dot white"></span><span>BLANCA<br>2 ESTRELLAS</span><strong>18€</strong></button>
+            </div>
+            <div class="promo-step">2 · ELIGE TU TALLA</div>
+            <div class="promo-tabs">
+                <button type="button" class="promo-tab active" onclick="promoGroup(this,'adulto')">ADULTO</button>
+                <button type="button" class="promo-tab" onclick="promoGroup(this,'nino')">NIÑO</button>
+            </div>
+            <div class="promo-sizes" id="promoSizesAdulto"><button type="button" class="promo-size" onclick="promoSize(this)">S</button><button type="button" class="promo-size" onclick="promoSize(this)">M</button><button type="button" class="promo-size" onclick="promoSize(this)">L</button><button type="button" class="promo-size" onclick="promoSize(this)">XL</button><button type="button" class="promo-size" onclick="promoSize(this)">XXL</button><button type="button" class="promo-size" onclick="promoSize(this)">XXXL</button></div>
+            <div class="promo-sizes" id="promoSizesNino" style="display:none;"><button type="button" class="promo-size" onclick="promoSize(this)">16</button><button type="button" class="promo-size" onclick="promoSize(this)">18</button><button type="button" class="promo-size" onclick="promoSize(this)">20</button><button type="button" class="promo-size" onclick="promoSize(this)">22</button><button type="button" class="promo-size" onclick="promoSize(this)">24</button><button type="button" class="promo-size" onclick="promoSize(this)">26</button><button type="button" class="promo-size" onclick="promoSize(this)">28</button></div>
+            <a href="#" class="promo-wa" onclick="promoWhatsApp(event)">💬 PREGUNTAR POR WHATSAPP</a>
+            <div class="promo-warn" id="promoWarn"></div>
+        </div>
+        <div class="top-views-badge"><span class="dot"></span><span id="top-views-counter-2">CARGANDO...</span></div>
+    </div>
+
     <main class="arcade-screen">
 
 
@@ -2125,7 +2230,8 @@
                     <option value="all">TODAS</option>
                     <option value="camiseta">CAMISETAS</option>
                     <option value="chandal">CHÁNDALS</option>
-                    <option value="conjunto">CONJUNTOS DE INVIERNO</option>
+                    <option value="chandal-deportivo">CHÁNDALS DEPORTIVOS</option>
+                    <option value="conjunto">CONJUNTOS INVIERNO</option>
                     <option value="retro">RETRO</option>
                     <option value="colab">COLABORACIONES</option>
                 </select>
@@ -2141,6 +2247,44 @@
             </div>
             <button class="filter-btn-reset" onclick="resetFilters()">↺ RESETEAR</button>
         </div>
+
+        <!-- CONJUNTOS INVIERNO -->
+        <hr class="section-divider"><section id="invierno" class="product-section">
+            <h2 class="section-header fade-in">❄️ CONJUNTOS INVIERNO ❄️</h2>
+
+            <div class="chandal-feature fade-in" style="position:relative;">
+                <div style="position:absolute;top:16px;right:16px;background:linear-gradient(135deg,#C1121F,#E5383B);color:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;letter-spacing:1.5px;padding:6px 14px;border-radius:20px;box-shadow:0 0 15px rgba(193,18,31,0.6);animation:newPulseTrend 1.8s ease-in-out infinite;z-index:2;">NUEVO</div>
+                <span class="chandal-feature-badge">🔥 Todo el catálogo aquí</span>
+                <div class="chandal-feature-imgs">
+                    <img loading="lazy" src="https://i.pinimg.com/736x/a7/ab/16/a7ab16bd1b96d904523929c4e84a1ea1.jpg" onclick="openZoom(this.src)" alt="Conjunto de invierno">
+                </div>
+                <div class="chandal-price-row">
+                    <div class="chandal-price-pill">❄️ Conjuntos de invierno<strong>45 €</strong></div>
+                </div>
+                <h3>Conjuntos de invierno · Todas las marcas</h3>
+                <p>Chándals, chaquetas y conjuntos de invierno de las mejores marcas. Entra al catálogo completo y elige el tuyo — te lo conseguimos al momento.</p>
+                <a href="https://ax6789.x.yupoo.com/categories/5048395?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAad2nV0k1bvOS1LYf5IFPrcOgIS1nFtwd-z-KJHZl3nRGuRySkeGseZ5VMU7aA_aem__XZGWMKumJftQf3QJeyygg" target="_blank" class="chandal-feature-btn">📖 VER CATÁLOGO COMPLETO →</a>
+            </div>
+        </section>
+
+        <!-- CHÁNDALS DEPORTIVOS -->
+        <hr class="section-divider"><section id="calle" class="product-section">
+            <h2 class="section-header fade-in">⚡ CHÁNDALS DEPORTIVOS ⚡</h2>
+
+            <div class="chandal-feature fade-in">
+                <span class="chandal-feature-badge">🔥 Todo el catálogo aquí</span>
+                <div class="chandal-feature-imgs">
+                    <img loading="lazy" src="https://elreydeldeporte.es/wp-content/uploads/2023/03/NIKE-CW6133.010-2.jpg" onclick="openZoom(this.src)" alt="Chándal deportivo">
+                    <img loading="lazy" src="https://img01.ztat.net/article/spp-media-p1/5dae4999bc084873a728d3ae7f9f0d86/3553a8f5f1ff4164b70050201795401c.jpg?imwidth=762&filter=packshot" onclick="openZoom(this.src)" alt="Chándal deportivo">
+                </div>
+                <div class="chandal-price-row">
+                    <div class="chandal-price-pill">⚡ Chándals deportivos<strong>40 €</strong></div>
+                </div>
+                <h3>Chándals deportivos · Todas las marcas</h3>
+                <p>Chándals y conjuntos deportivos de las mejores marcas. Entra al catálogo completo y elige el tuyo — te lo conseguimos al momento.</p>
+                <a href="https://ax6789.x.yupoo.com/categories/5048393" target="_blank" class="chandal-feature-btn">📖 VER CATÁLOGO COMPLETO →</a>
+            </div>
+        </section>
 
         <!-- CAMISETAS -->
         <hr class="section-divider"><section id="camisetas" class="product-section">
@@ -2203,6 +2347,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-esp-local26" onchange="toggleDorsal(this,'esp-local26')">
+                                <label class="custom-label" for="dorsal-esp-local26">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-esp-local26">
+                                <input type="text" class="custom-input" id="nombre-esp-local26" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-esp-local26" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-esp-local26" onchange="toggleParche(this,'esp-local26')">
+                                <label class="custom-label" for="parche-esp-local26">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-esp-local26">
+                                <select class="custom-input" id="parchetipo-esp-local26">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Camiseta España Local Mundial (Dos Estrellas)',22,'esp-local26',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2220,6 +2385,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-esp-visit26" onchange="toggleDorsal(this,'esp-visit26')">
+                                <label class="custom-label" for="dorsal-esp-visit26">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-esp-visit26">
+                                <input type="text" class="custom-input" id="nombre-esp-visit26" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-esp-visit26" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-esp-visit26" onchange="toggleParche(this,'esp-visit26')">
+                                <label class="custom-label" for="parche-esp-visit26">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-esp-visit26">
+                                <select class="custom-input" id="parchetipo-esp-visit26">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Camiseta España Visitante Mundial (Dos Estrellas)',22,'esp-visit26',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2237,6 +2423,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-rm-local2627" onchange="toggleDorsal(this,'rm-local2627')">
+                                <label class="custom-label" for="dorsal-rm-local2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-rm-local2627">
+                                <input type="text" class="custom-input" id="nombre-rm-local2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-rm-local2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-rm-local2627" onchange="toggleParche(this,'rm-local2627')">
+                                <label class="custom-label" for="parche-rm-local2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-rm-local2627">
+                                <select class="custom-input" id="parchetipo-rm-local2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Real Madrid Local 2026/27',22,'rm-local2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2254,6 +2461,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-rm-visit2627" onchange="toggleDorsal(this,'rm-visit2627')">
+                                <label class="custom-label" for="dorsal-rm-visit2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-rm-visit2627">
+                                <input type="text" class="custom-input" id="nombre-rm-visit2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-rm-visit2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-rm-visit2627" onchange="toggleParche(this,'rm-visit2627')">
+                                <label class="custom-label" for="parche-rm-visit2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-rm-visit2627">
+                                <select class="custom-input" id="parchetipo-rm-visit2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Real Madrid Visitante 2026/27',22,'rm-visit2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2271,6 +2499,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-esp-especial26" onchange="toggleDorsal(this,'esp-especial26')">
+                                <label class="custom-label" for="dorsal-esp-especial26">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-esp-especial26">
+                                <input type="text" class="custom-input" id="nombre-esp-especial26" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-esp-especial26" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-esp-especial26" onchange="toggleParche(this,'esp-especial26')">
+                                <label class="custom-label" for="parche-esp-especial26">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-esp-especial26">
+                                <select class="custom-input" id="parchetipo-esp-especial26">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Camiseta Especial España',22,'esp-especial26',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2288,6 +2537,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-barca-local2627" onchange="toggleDorsal(this,'barca-local2627')">
+                                <label class="custom-label" for="dorsal-barca-local2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-barca-local2627">
+                                <input type="text" class="custom-input" id="nombre-barca-local2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-barca-local2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-barca-local2627" onchange="toggleParche(this,'barca-local2627')">
+                                <label class="custom-label" for="parche-barca-local2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-barca-local2627">
+                                <select class="custom-input" id="parchetipo-barca-local2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'FC Barcelona Local 2026/27',22,'barca-local2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2305,6 +2575,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-barca-visit2627" onchange="toggleDorsal(this,'barca-visit2627')">
+                                <label class="custom-label" for="dorsal-barca-visit2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-barca-visit2627">
+                                <input type="text" class="custom-input" id="nombre-barca-visit2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-barca-visit2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-barca-visit2627" onchange="toggleParche(this,'barca-visit2627')">
+                                <label class="custom-label" for="parche-barca-visit2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-barca-visit2627">
+                                <select class="custom-input" id="parchetipo-barca-visit2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'FC Barcelona Visitante 2026/27',22,'barca-visit2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2322,6 +2613,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-atleti-local2627" onchange="toggleDorsal(this,'atleti-local2627')">
+                                <label class="custom-label" for="dorsal-atleti-local2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-atleti-local2627">
+                                <input type="text" class="custom-input" id="nombre-atleti-local2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-atleti-local2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-atleti-local2627" onchange="toggleParche(this,'atleti-local2627')">
+                                <label class="custom-label" for="parche-atleti-local2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-atleti-local2627">
+                                <select class="custom-input" id="parchetipo-atleti-local2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Atlético de Madrid Local 2026/27',22,'atleti-local2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2339,6 +2651,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-rm-alt2627" onchange="toggleDorsal(this,'rm-alt2627')">
+                                <label class="custom-label" for="dorsal-rm-alt2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-rm-alt2627">
+                                <input type="text" class="custom-input" id="nombre-rm-alt2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-rm-alt2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-rm-alt2627" onchange="toggleParche(this,'rm-alt2627')">
+                                <label class="custom-label" for="parche-rm-alt2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-rm-alt2627">
+                                <select class="custom-input" id="parchetipo-rm-alt2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Real Madrid Alternativa 2026/27',22,'rm-alt2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2356,6 +2689,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-betis-2eq2627" onchange="toggleDorsal(this,'betis-2eq2627')">
+                                <label class="custom-label" for="dorsal-betis-2eq2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-betis-2eq2627">
+                                <input type="text" class="custom-input" id="nombre-betis-2eq2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-betis-2eq2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-betis-2eq2627" onchange="toggleParche(this,'betis-2eq2627')">
+                                <label class="custom-label" for="parche-betis-2eq2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-betis-2eq2627">
+                                <select class="custom-input" id="parchetipo-betis-2eq2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Real Betis 2ª Equipación 2026/27',22,'betis-2eq2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2373,6 +2727,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-atleti-2eq2627" onchange="toggleDorsal(this,'atleti-2eq2627')">
+                                <label class="custom-label" for="dorsal-atleti-2eq2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-atleti-2eq2627">
+                                <input type="text" class="custom-input" id="nombre-atleti-2eq2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-atleti-2eq2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-atleti-2eq2627" onchange="toggleParche(this,'atleti-2eq2627')">
+                                <label class="custom-label" for="parche-atleti-2eq2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-atleti-2eq2627">
+                                <select class="custom-input" id="parchetipo-atleti-2eq2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Atlético de Madrid 2ª Equipación 2026/27',22,'atleti-2eq2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2390,6 +2765,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-malaga-3eq2627" onchange="toggleDorsal(this,'malaga-3eq2627')">
+                                <label class="custom-label" for="dorsal-malaga-3eq2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-malaga-3eq2627">
+                                <input type="text" class="custom-input" id="nombre-malaga-3eq2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-malaga-3eq2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-malaga-3eq2627" onchange="toggleParche(this,'malaga-3eq2627')">
+                                <label class="custom-label" for="parche-malaga-3eq2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-malaga-3eq2627">
+                                <select class="custom-input" id="parchetipo-malaga-3eq2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Málaga CF 3ª Equipación 2026/27',22,'malaga-3eq2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2407,6 +2803,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-cordoba-3eq2627" onchange="toggleDorsal(this,'cordoba-3eq2627')">
+                                <label class="custom-label" for="dorsal-cordoba-3eq2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-cordoba-3eq2627">
+                                <input type="text" class="custom-input" id="nombre-cordoba-3eq2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-cordoba-3eq2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-cordoba-3eq2627" onchange="toggleParche(this,'cordoba-3eq2627')">
+                                <label class="custom-label" for="parche-cordoba-3eq2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-cordoba-3eq2627">
+                                <select class="custom-input" id="parchetipo-cordoba-3eq2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Córdoba CF 3ª Equipación 2026/27',22,'cordoba-3eq2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2424,6 +2841,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-cordoba-1eq2627" onchange="toggleDorsal(this,'cordoba-1eq2627')">
+                                <label class="custom-label" for="dorsal-cordoba-1eq2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-cordoba-1eq2627">
+                                <input type="text" class="custom-input" id="nombre-cordoba-1eq2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-cordoba-1eq2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-cordoba-1eq2627" onchange="toggleParche(this,'cordoba-1eq2627')">
+                                <label class="custom-label" for="parche-cordoba-1eq2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-cordoba-1eq2627">
+                                <select class="custom-input" id="parchetipo-cordoba-1eq2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Córdoba CF 1ª Equipación 2026/27',22,'cordoba-1eq2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2441,6 +2879,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-barca-3eq2627" onchange="toggleDorsal(this,'barca-3eq2627')">
+                                <label class="custom-label" for="dorsal-barca-3eq2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-barca-3eq2627">
+                                <input type="text" class="custom-input" id="nombre-barca-3eq2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-barca-3eq2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-barca-3eq2627" onchange="toggleParche(this,'barca-3eq2627')">
+                                <label class="custom-label" for="parche-barca-3eq2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-barca-3eq2627">
+                                <select class="custom-input" id="parchetipo-barca-3eq2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'FC Barcelona 3ª Equipación 2026/27',22,'barca-3eq2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2458,6 +2917,27 @@
                         </div>
                         <div class="size-selector size-group-adulto"><button class="size-btn" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">XXXL</button></div>
                         <div class="size-selector size-group-nino" style="display:none;"><button class="size-btn" onclick="selectSize(this)">16</button><button class="size-btn" onclick="selectSize(this)">18</button><button class="size-btn" onclick="selectSize(this)">20</button><button class="size-btn" onclick="selectSize(this)">22</button><button class="size-btn" onclick="selectSize(this)">24</button><button class="size-btn" onclick="selectSize(this)">26</button><button class="size-btn" onclick="selectSize(this)">28</button></div>
+                        <div class="custom-options">
+                            <span class="custom-title">🎨 PERSONALIZACIÓN</span>
+                            <div class="custom-row">
+                                <input type="checkbox" class="custom-checkbox" id="dorsal-cordoba-2eq2627" onchange="toggleDorsal(this,'cordoba-2eq2627')">
+                                <label class="custom-label" for="dorsal-cordoba-2eq2627">Nombre + Número <span>(+2€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-dorsal-cordoba-2eq2627">
+                                <input type="text" class="custom-input" id="nombre-cordoba-2eq2627" placeholder="NOMBRE (ej: MESSI)" maxlength="14">
+                                <input type="text" class="custom-input" id="numero-cordoba-2eq2627" placeholder="NÚMERO (ej: 10)" maxlength="3">
+                            </div>
+                            <div class="custom-row" style="margin-top:8px;">
+                                <input type="checkbox" class="custom-checkbox" id="parche-cordoba-2eq2627" onchange="toggleParche(this,'cordoba-2eq2627')">
+                                <label class="custom-label" for="parche-cordoba-2eq2627">Parche Liga o Champions <span>(+1€)</span></label>
+                            </div>
+                            <div class="custom-inputs" id="inputs-parche-cordoba-2eq2627">
+                                <select class="custom-input" id="parchetipo-cordoba-2eq2627">
+                                    <option value="LIGA">Parche de Liga</option>
+                                    <option value="CHAMPIONS">Parche de Champions League</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="card-actions"><button class="buy-btn" onclick="addToCartCustom(this,'Córdoba CF 2ª Equipación 2026/27',22,'cordoba-2eq2627',this.closest('.product-card').querySelector('.product-img').src)">COMPRAR</button><button class="ask-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;" onclick="askInstagram(this)">📸</button></div>
                         <div class="dm-alert">VE AL DM</div>
                     </div>
@@ -2572,25 +3052,6 @@
 
         <!-- RETRO -->
 
-        <!-- CONJUNTOS DE INVIERNO -->
-        <hr class="section-divider"><section id="calle" class="product-section">
-            <h2 class="section-header fade-in">❄️ CONJUNTOS DE INVIERNO ❄️</h2>
-
-            <div class="chandal-feature fade-in" style="position:relative;">
-                <div style="position:absolute;top:16px;right:16px;background:linear-gradient(135deg,#C1121F,#E5383B);color:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;letter-spacing:1.5px;padding:6px 14px;border-radius:20px;box-shadow:0 0 15px rgba(193,18,31,0.6);animation:newPulseTrend 1.8s ease-in-out infinite;z-index:2;">NUEVO</div>
-                <span class="chandal-feature-badge">🔥 Todo el catálogo aquí</span>
-                <div class="chandal-feature-imgs">
-                    <img loading="lazy" src="https://moodtoronto.com/cdn/shop/files/noctaBLACKpuffer.png?v=1699561103" onclick="openZoom(this.src)" alt="Conjunto de invierno">
-                    <img loading="lazy" src="https://thesolestory.com/cdn/shop/files/60980-63_001_0c808381-ae1a-4354-b48d-d65f7d7e3e29.png?v=1693994156" onclick="openZoom(this.src)" alt="Conjunto de invierno" style="background:#fff;">
-                </div>
-                <div class="chandal-price-row">
-                    <div class="chandal-price-pill">❄️ Conjuntos de invierno<strong>45 €</strong></div>
-                </div>
-                <h3>Conjuntos de invierno · Todas las marcas</h3>
-                <p>Chándals, chaquetas y conjuntos de invierno de las mejores marcas. Entra al catálogo completo y elige el tuyo — te lo conseguimos al momento.</p>
-                <a href="https://ax6789.x.yupoo.com/categories/5048393" target="_blank" class="chandal-feature-btn">📖 VER CATÁLOGO COMPLETO →</a>
-            </div>
-        </section>
 
         <hr class="section-divider"><section id="zapatillas" class="product-section">
             <h2 class="section-header fade-in">ZAPATILLAS</h2>
@@ -2764,9 +3225,15 @@
                     <span class="catalog-card-btn">VER TODO →</span>
                 </a>
                 <a href="https://ax6789.x.yupoo.com/categories/5048393" target="_blank" class="catalog-card cat-street">
+                    <div class="catalog-card-emoji">⚡</div>
+                    <div class="catalog-card-title">CHÁNDALS DEPORTIVOS</div>
+                    <div class="catalog-card-desc">Chándals y conjuntos deportivos premium</div>
+                    <span class="catalog-card-btn">VER TODO →</span>
+                </a>
+                <a href="https://ax6789.x.yupoo.com/categories/5048395?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgRzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAad2nV0k1bvOS1LYf5IFPrcOgIS1nFtwd-z-KJHZl3nRGuRySkeGseZ5VMU7aA_aem__XZGWMKumJftQf3QJeyygg" target="_blank" class="catalog-card cat-colab">
                     <div class="catalog-card-emoji">❄️</div>
-                    <div class="catalog-card-title">CONJUNTOS DE INVIERNO</div>
-                    <div class="catalog-card-desc">Chándals y conjuntos de invierno premium</div>
+                    <div class="catalog-card-title">CONJUNTOS INVIERNO</div>
+                    <div class="catalog-card-desc">Conjuntos de invierno premium</div>
                     <span class="catalog-card-btn">VER TODO →</span>
                 </a>
                 <a href="https://thecamisproject.com/collections/frontpage" target="_blank" class="catalog-card cat-colab">
@@ -2921,6 +3388,12 @@
             updatePrice(checkbox.closest('.product-card'));
         }
 
+        function toggleParche(checkbox, uid) {
+            const inputs = document.getElementById('inputs-parche-' + uid);
+            inputs.classList.toggle('visible', checkbox.checked);
+            updatePrice(checkbox.closest('.product-card'));
+        }
+
         function updatePrice(card) {
             const priceEl = card.querySelector('.price-dynamic');
             if (!priceEl) return;
@@ -2928,11 +3401,9 @@
             const uid = priceEl.id.replace('price-', '');
             const dorsalChecked  = document.getElementById('dorsal-'  + uid)?.checked;
             const parcheChecked  = document.getElementById('parche-'  + uid)?.checked;
-            const playerChecked  = document.getElementById('player-'  + uid)?.checked;
             let total = base;
-            if (dorsalChecked) total += 3;
+            if (dorsalChecked) total += 2;
             if (parcheChecked) total += 1;
-            if (playerChecked) total += 2.5;
             priceEl.textContent = total % 1 === 0 ? total + ' €' : total.toFixed(2) + ' €';
         }
 
@@ -3260,9 +3731,10 @@
 
             const dorsalChecked = document.getElementById('dorsal-' + uid)?.checked;
             const parcheChecked = document.getElementById('parche-' + uid)?.checked;
-            const playerChecked = document.getElementById('player-' + uid)?.checked;
             const nombreVal = document.getElementById('nombre-' + uid)?.value.trim().toUpperCase();
             const dorsalVal = document.getElementById('numero-' + uid)?.value.trim();
+            const parcheTipoEl = document.getElementById('parchetipo-' + uid);
+            const parcheTipo = parcheTipoEl ? (parcheTipoEl.value === 'CHAMPIONS' ? 'CHAMPIONS LEAGUE' : 'LIGA') : 'LIGA';
 
             if (dorsalChecked && (!nombreVal || !dorsalVal)) {
                 const alertEl = card.querySelector('.dm-alert');
@@ -3279,8 +3751,7 @@
             // Construir descripcion de extras para el nombre del artículo
             let extras = [];
             if (dorsalChecked) extras.push('DORSAL: ' + dorsalVal + ' | NOMBRE: ' + nombreVal);
-            if (parcheChecked) extras.push('CON PARCHES');
-            if (playerChecked) extras.push('PLAYER VERSION');
+            if (parcheChecked) extras.push('PARCHE ' + parcheTipo);
 
             let fullName = name + ' [' + size + ']';
             if (extras.length > 0) fullName += ' (' + extras.join(', ') + ')';
@@ -5203,7 +5674,7 @@ function closeAdminOverlay() {
 (function() {
     const SB_URL = 'https://rtormahtvhexmjsvxvtp.supabase.co';
     const SB_KEY = 'sb_publishable_uXsQkt7zmfLmjfHV27yDKQ_YqRrrPEG';
-    const VENTANA_MINUTOS = 48 * 60; // Consideramos "online" si ha visitado en las últimas 48h
+    const VENTANA_MINUTOS = 24 * 60; // Consideramos "visita" si ha estado en las últimas 24h
     const INTERVALO_PING_MS = 60 * 1000; // Ping cada 60 segundos para mantener la sesión viva
 
     // ID único de sesión (se genera una vez por pestaña/visita)
@@ -5257,14 +5728,22 @@ function closeAdminOverlay() {
         await ping();
         const total = await contarOnline();
         const el = document.getElementById('online-counter-display');
-        if (!el) return;
+        const top = document.getElementById('top-views-counter');
+        const top2 = document.getElementById('top-views-counter-2');
+        let txt, txtTop;
         if (total === null) {
-            el.textContent = 'MAKINITAS SHOP';
+            txt = 'MAKINITAS SHOP';
+            txtTop = 'MAKINITAS SHOP';
         } else if (total <= 1) {
-            el.textContent = '1 visita en 48h';
+            txt = '1 visita en 24h';
+            txtTop = '👀 1 persona ha visto la web en las últimas 24h';
         } else {
-            el.textContent = total + ' visitas en 48h';
+            txt = total + ' visitas en 24h';
+            txtTop = '👀 ' + total + ' personas han visto la web en las últimas 24h';
         }
+        if (el) el.textContent = txt;
+        if (top) top.textContent = txtTop;
+        if (top2) top2.textContent = txtTop;
     }
 
     // Primer ping al cargar la página
@@ -5277,6 +5756,44 @@ function closeAdminOverlay() {
     document.addEventListener('visibilitychange', () => {
         if (document.visibilityState === 'visible') actualizarContador();
     });
+})();
+</script>
+
+
+<script>
+(function() {
+    let elegida = null;
+    let talla = null;
+
+    window.promoPick = function(btn) {
+        document.querySelectorAll('.promo-opt').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        elegida = { name: btn.dataset.name, price: btn.dataset.price };
+        document.getElementById('promoWarn').textContent = '';
+    };
+    window.promoSize = function(btn) {
+        document.querySelectorAll('.promo-size').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        talla = btn.textContent.trim();
+        document.getElementById('promoWarn').textContent = '';
+    };
+    window.promoGroup = function(btn, g) {
+        document.querySelectorAll('.promo-tab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('promoSizesAdulto').style.display = g === 'adulto' ? 'flex' : 'none';
+        document.getElementById('promoSizesNino').style.display = g === 'nino' ? 'flex' : 'none';
+        document.querySelectorAll('.promo-size').forEach(b => b.classList.remove('selected'));
+        talla = null;
+    };
+    window.promoWhatsApp = function(e) {
+        e.preventDefault();
+        const warn = document.getElementById('promoWarn');
+        if (!elegida) { warn.textContent = '⚠ Elige primero tu camiseta'; return; }
+        if (!talla)   { warn.textContent = '⚠ Elige tu talla'; return; }
+        const pedido = elegida.name + ' · TALLA ' + talla + ' · ' + elegida.price + '€';
+        const msg = 'HOLA MAKINITAS, QUIERO ESTA CAMISETA (' + pedido + ') ¿LA TENDRIAS EN TU STOCK?';
+        window.open('https://wa.me/34607088510?text=' + encodeURIComponent(msg), '_blank');
+    };
 })();
 </script>
 
